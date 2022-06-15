@@ -2,7 +2,7 @@ const CONFIG = {
 editableProps:{
     placeholder:'Teype...',
     style:{
-        padding:'15px'
+        padding:'15px',
     }
 }
 }

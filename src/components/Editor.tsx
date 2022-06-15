@@ -55,7 +55,7 @@ const Editor: FunctionComponent<EditorProps> = ({
       placement: "top",
     };
     return (
-      <BalloonToolbar popperOptions={popperOptions} theme={theme}>
+      <BalloonToolbar popperOptions={popperOptions} theme={theme} arrow={arrow}>
         <MarkToolbarButton
           type={getPluginType(editor!, MARK_BOLD)}
           icon={<SVG icon="ri-bold" />}
