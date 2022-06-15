@@ -11,7 +11,7 @@ export default defineConfig({
       entry: path.resolve(__dirname, 'src/index.ts'),
       name: 'rich-editor',
       // the proper extensions will be added
-      fileName: 'my-rich-editor'
+      fileName: 'rich-editor'
     },
     rollupOptions: {
       // 确保外部化处理那些你不想打包进库的依赖
