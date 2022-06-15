@@ -5,6 +5,10 @@
   "keywords": [
     "rich-editor"
   ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ok3-8/dolphin-rich-editor.git"
+  },
   "types": "lib/index.d.ts",
   "files": [
     "lib"
