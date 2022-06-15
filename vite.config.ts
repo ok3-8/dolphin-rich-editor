@@ -7,7 +7,7 @@ export default defineConfig({
   plugins: [react()],
   build: {
     lib: {
-      entry: path.resolve(__dirname, 'lib/main.js'),
+      entry: path.resolve(__dirname, 'src/index.ts'),
       name: 'rich-editor',
       // the proper extensions will be added
       fileName: 'my-rich-editor'
