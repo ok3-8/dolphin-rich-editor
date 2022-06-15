@@ -24,6 +24,7 @@ export const VoidElement = <V extends Value>(props: VoidElementProps<V>) => {
       {...rootProps}
       {...nodeProps}
     >
+      {text}
       {children}
     </CustTag>
   );

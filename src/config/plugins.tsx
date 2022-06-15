@@ -15,7 +15,8 @@ import {
   createSuperscriptPlugin,
   createSubscriptPlugin,
   createSoftBreakPlugin,
-  createCodeBlockPlugin
+  createNodeIdPlugin,
+  createComboboxPlugin,
 } from "@udecode/plate";
 import { VoidElement } from "../components/VoidElement";
 import {createEditableVoidPlugin} from '../components/createEditableVoidPlugin'
@@ -29,7 +30,8 @@ const basicElements = createPlugins(
     createSubscriptPlugin(),
     createHighlightPlugin(),
     createSuperscriptPlugin(),
-    createCodeBlockPlugin(),
+    createNodeIdPlugin(),
+    createComboboxPlugin(),
     createEditableVoidPlugin({
       component: VoidElement,
     }),
@@ -44,9 +46,9 @@ const basicMarks =createPlugins( [
   createParagraphPlugin(),
   createListPlugin(),
   createExitBreakPlugin(),
+  createSoftBreakPlugin(),
   createDeserializeDocxPlugin(),
   createJuicePlugin(),
-  createSoftBreakPlugin(),
 ],
 {
   components: createPlateUI(),
