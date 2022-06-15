@@ -6,6 +6,7 @@ import * as path from 'path'
 export default defineConfig({
   plugins: [react()],
   build: {
+    outDir:'lib',
     lib: {
       entry: path.resolve(__dirname, 'src/index.ts'),
       name: 'rich-editor',
