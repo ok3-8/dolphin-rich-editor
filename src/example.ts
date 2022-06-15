@@ -9,7 +9,16 @@ const initialValue = [
         "id": 10004
     },
     {
-        "type": "h2",
+        "type": "p",
+        "children": [
+            {
+                "text": ""
+            }
+        ],
+        "id": 10006
+    },
+    {
+        "type": "void-block",
         "children": [
             {
                 "text": "💧 Basic Marks"
