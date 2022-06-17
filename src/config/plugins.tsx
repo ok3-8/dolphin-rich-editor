@@ -17,7 +17,15 @@ import {
   createSoftBreakPlugin,
   createNodeIdPlugin,
   createComboboxPlugin,
-  createFontColorPlugin
+  createFontColorPlugin,
+  createResetNodePlugin,
+  ELEMENT_LI,
+  ELEMENT_LIC,
+  ELEMENT_OL,
+  ELEMENT_PARAGRAPH,
+  isSelectionAtBlockStart,
+  ELEMENT_UL,
+  isBlockAboveEmpty
 } from "@udecode/plate";
 import { VoidElement } from "../components/VoidElement";
 import {createEditableVoidPlugin} from '../components/createEditableVoidPlugin'
@@ -42,6 +50,11 @@ const basicElements = createPlugins(
   }
 );
 
+const resetBlockTypesCommonRule = {
+  types: [ELEMENT_UL],
+  defaultType: ELEMENT_PARAGRAPH,
+};
+
 const basicMarks =createPlugins( [
   createHeadingPlugin(),
   createParagraphPlugin(),
@@ -51,6 +64,17 @@ const basicMarks =createPlugins( [
   createDeserializeDocxPlugin(),
   createJuicePlugin(),
   createFontColorPlugin(),
+  createResetNodePlugin({
+    options: {
+      rules: [
+        {
+          ...resetBlockTypesCommonRule,
+          hotkey: 'Enter',
+          predicate: isBlockAboveEmpty,
+        },
+      ],
+    }
+  }),
 ],
 {
   components: createPlateUI(),
