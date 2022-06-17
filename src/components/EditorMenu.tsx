@@ -1,3 +1,4 @@
+import { ColorPickerToolbarDropdown, MARK_COLOR } from "@udecode/plate";
 import {
   deleteColumn,
   deleteRow,
@@ -67,6 +68,12 @@ const EditorMenu: FunctionComponent<EditorMenuProps> = () => {
         }
         transform={deleteColumn}
       ></TableToolbarButton>
+      <ColorPickerToolbarDropdown
+        pluginKey={MARK_COLOR}
+        icon={<SVG icon="ri-font-color" />}
+        selectedIcon={<SVG icon="ri-check-line" />}
+        tooltip={{ content: "Text color" }}
+      />
     </ToolBar>
   );
 };

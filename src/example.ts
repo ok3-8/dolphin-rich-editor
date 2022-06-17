@@ -39,7 +39,8 @@ const initialValue = [
         "type": "p",
         "children": [
             {
-                "text": "You can customize the type, the component and the hotkey for each of these."
+                "text": "You can customize the type, the component and the hotkey for each of these.",
+                color:'grey',
             }
         ],
         "id": 10007

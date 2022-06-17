@@ -14,7 +14,7 @@ export const VoidElement = <V extends Value>(props: VoidElementProps<V>) => {
   const { attributes, children, nodeProps, element } = props;
   const rootProps = getRootProps(props);
   const text = element.children[0].text;
-  const CustTag = element.as === "h3" ? "h3" : "h4";
+  const CustTag = element.as === "h4" ? "h4" : "h3";
   return (
     <CustTag
       {...attributes}

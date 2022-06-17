@@ -17,6 +17,7 @@ import {
   createSoftBreakPlugin,
   createNodeIdPlugin,
   createComboboxPlugin,
+  createFontColorPlugin
 } from "@udecode/plate";
 import { VoidElement } from "../components/VoidElement";
 import {createEditableVoidPlugin} from '../components/createEditableVoidPlugin'
@@ -49,6 +50,7 @@ const basicMarks =createPlugins( [
   createSoftBreakPlugin(),
   createDeserializeDocxPlugin(),
   createJuicePlugin(),
+  createFontColorPlugin(),
 ],
 {
   components: createPlateUI(),
