@@ -18,6 +18,7 @@ import {
 import { Placement } from "tippy.js";
 import { TippyProps } from "@tippyjs/react";
 import SVG from "./SVG";
+import { ResetTextColorButton } from "./ResetTextColorButton";
 
 const BalloonToolbarMarks = () => {
   const editor = usePlateEditorRef();
@@ -92,6 +93,15 @@ const BalloonToolbarMarks = () => {
           ...tooltip,
         }}
       />
+      <ResetTextColorButton
+        icon={<SVG icon="ri-brush-3-line" />}
+        tooltip={{
+          content: "Reset White",
+          ...tooltip,
+        }}
+        originColor="#fff"
+      />
+      
     </BalloonToolbar>
   );
 };
